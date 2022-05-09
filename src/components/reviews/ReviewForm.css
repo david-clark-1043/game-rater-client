@@ -1,0 +1,4 @@
+.reviewForm {
+    display: flex;
+    flex-direction: column;
+}
