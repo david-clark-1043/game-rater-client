@@ -3,6 +3,8 @@ import { Route } from "react-router-dom"
 import { GameDetails } from "./games/GameDetails"
 import { GameForm } from "./games/GameForm"
 import { GameList } from "./games/GameList"
+import { ImageForm } from "./images/ImageForm"
+import { RatingForm } from "./ratings/RatingForm"
 import { ReviewForm } from "./reviews/ReviewForm"
 // import { EventForm } from "./event/EventForm"
 // import { EventList } from "./event/EventList"
@@ -27,6 +29,12 @@ export const ApplicationViews = () => {
             </Route>
             <Route exact path="/games/:gameId(\d+)/review">
                 <ReviewForm />
+            </Route>
+            <Route exact path="/games/:gameId(\d+)/rating">
+                <RatingForm />
+            </Route>
+            <Route exact path="/games/:gameId(\d+)/image">
+                <ImageForm />
             </Route>
             <Route exact path="/games/new">
                 <GameForm editing={false} />

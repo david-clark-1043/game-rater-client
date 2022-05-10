@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { Link } from "react-router-dom"
+import { ImageList } from "../images/ImageList"
+import { RatingList } from "../ratings/RatingList"
 import { ReviewList } from "../reviews/ReviewList"
 import { getSingleGame } from "./GameManager"
 
@@ -30,6 +32,8 @@ export const GameDetails = ({ game, listView, deleteSingleGame }) => {
                                 <div className="currentGame__yearReleased">Year released is {currentGame.ageRec}</div>
                                 <Link to={`/currentGames/edit/${currentGame.id}`}>Edit</Link>
                                 <ReviewList gameId={gameId} currentGame={currentGame} />
+                                <RatingList gameId={gameId} currentGame={currentGame} />
+                                <ImageList gameId={gameId} currentGame={currentGame} />
                                 <hr />
                             </section>
                 setJSX(jsx)
